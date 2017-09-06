@@ -4,8 +4,50 @@
              xmlns:local="clr-namespace:XamarinSample"
              x:Class="XamarinSample.MainPage">
 
-	<Label Text="Welcome, Jeremy." 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ScrollView>
+        <StackLayout
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
 
+            <Label Text="Registration Form"
+                   FontSize="32"
+                   TextColor="Red"
+                   FontAttributes="Bold"/>
+            
+            <Label Text="Welcome to the registration form! Please fill out the following information to register for the event:"
+                   FontSize="20"
+                   TextColor="Black"/>
+
+            <Label Text="Personal Information:"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="Blue"/>
+
+            <Entry Placeholder="First name"/>
+            <Entry Placeholder="Middle name"/>
+            <Entry Placeholder="Last name"/>
+            
+            <Label Text="Address:"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="Blue"/>
+
+            <Entry Placeholder="Address"/>
+            <Entry Placeholder="City"/>
+            <Entry Placeholder="State"/>
+            <Entry Placeholder="Zip Code"/>
+
+            <Label Text="Notes:"
+                   FontSize="20"
+                   TextColor="Black"/>
+            
+            <Editor HeightRequest="100"/>
+
+            <Button Text="Submit"
+                    FontSize="30"
+                    TextColor="White"
+                    BackgroundColor="Black"/>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
