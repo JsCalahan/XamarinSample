@@ -46,7 +46,8 @@
             <Button Text="Submit"
                     FontSize="30"
                     TextColor="White"
-                    BackgroundColor="Black"/>
+                    BackgroundColor="Black"
+                    Clicked="Button_Clicked"/>
 
         </StackLayout>
     </ScrollView>
