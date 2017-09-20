@@ -16,7 +16,7 @@ namespace XamarinSample
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new successPage());
+            Navigation.PushAsync(new UserViewPage());
         }
     }
 }
