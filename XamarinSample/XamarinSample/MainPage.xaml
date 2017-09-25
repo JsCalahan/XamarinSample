@@ -48,6 +48,9 @@
                     TextColor="White"
                     BackgroundColor="Black"
                     Clicked="Button_Clicked"/>
+            
+            <Button x:name="ListViewButton" Text="Go to list"
+                    Clicked="ListViewButtonClicked"/>
 
         </StackLayout>
     </ScrollView>

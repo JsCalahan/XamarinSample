@@ -18,5 +18,10 @@ namespace XamarinSample
         {
             Navigation.PushAsync(new UserViewPage());
         }
+
+        private void ListViewButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ListViewPage());
+        }
     }
 }

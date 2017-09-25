@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinSample.ListViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry x:Name="newMovieEntry"
+                   Placeholder="Enter a new movie to the list."/>
+
+            <Button x:Name="AddMovieButton"
+                    Text="Add a new item"
+                    Clicked="AddMovieButton_Clicked"/>
+            
+            <ListView x:Name="moviesListView"/>
+
+            <Button x:Name="ClearMoviesButton" Text="Clear movies list"
+                    Clicked="ClearMoviesButton_Clicked"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
