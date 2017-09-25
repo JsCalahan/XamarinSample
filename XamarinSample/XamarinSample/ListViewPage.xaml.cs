@@ -40,5 +40,13 @@ namespace XamarinSample
             Movies.Clear();
             moviesListView.ItemsSource = new List<string>();
         }
+
+        public void OnDelete(object sender, EventArgs e)
+        {
+            //DisplayAlert("Delete Context Action", "Removing this movie from the list.", "OK");
+            
+            Movies.Remove(sender as string);
+            moviesListView.ItemsSource = Movies;
+        }
     }
 }

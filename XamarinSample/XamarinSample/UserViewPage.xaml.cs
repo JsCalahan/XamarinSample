@@ -19,8 +19,8 @@ namespace XamarinSample
 
         private void nameButton_Clicked(object sender, EventArgs e)
         {
-            int numberOne = Convert.ToInt32(number1Entry.Text);
-            int numberTwo = Convert.ToInt32(number2Entry.Text);
+            int number1 = Convert.ToInt32(number1Entry.Text);
+            int number2 = Convert.ToInt32(number2Entry.Text);
             sumLabel.Text = "The sum of these two numbers is: " + (numberOne + numberTwo);
         }
     }
