@@ -21,7 +21,7 @@ namespace XamarinSample
         {
             int number1 = Convert.ToInt32(number1Entry.Text);
             int number2 = Convert.ToInt32(number2Entry.Text);
-            sumLabel.Text = "The sum of these two numbers is: " + (numberOne + numberTwo);
+            sumLabel.Text = "The sum of these two numbers is: " + (number1 + number2);
         }
     }
 }

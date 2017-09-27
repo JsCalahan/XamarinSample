@@ -12,14 +12,13 @@
                     Text="Add a new item"
                     Clicked="AddMovieButton_Clicked"/>
 
-            <ListView x:Name="moviesListView">
+            <ListView x:Name="moviesListView"
+                      ItemSelected="moviesListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
-                      
-                                <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
-               Text="Delete" IsDestructive="True" />
+                                <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
                             </ViewCell.ContextActions>
                             <StackLayout Padding="15,0">
                                 <Label Text="{Binding .}" />
@@ -29,11 +28,8 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-
             <Button x:Name="ClearMoviesButton" Text="Clear movies list"
                     Clicked="ClearMoviesButton_Clicked"/>
-
-
 
         </StackLayout>
     </ContentPage.Content>

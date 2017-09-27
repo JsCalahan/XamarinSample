@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,12 @@ namespace XamarinSample
     public partial class ListViewPage : ContentPage
     {
 
-        public List<string> Movies { get; set; }
+        public ObservableCollection<string> Movies { get; set; }
         public ListViewPage()
         {
             InitializeComponent();
 
-            this.Movies = new List<string>();
+            this.Movies = new ObservableCollection<string>();
         }
 
         private void AddMovieButton_Clicked(object sender, EventArgs e)
@@ -28,25 +29,42 @@ namespace XamarinSample
             {
                 DisplayAlert("Error", "Entry is empty.", "Ok");
             }
-            this.Movies.Add(newMovieEntry.Text);
-
-            newMovieEntry.Text = "";
-
-            moviesListView.ItemsSource = this.Movies;
+            else
+            {
+                this.Movies.Add(newMovieEntry.Text);
+                moviesListView.ItemsSource = this.Movies;
+                newMovieEntry.Text = "";
+            }
         }
 
         private void ClearMoviesButton_Clicked(object sender, EventArgs e)
         {
-            Movies.Clear();
+            this.Movies.Clear();
             moviesListView.ItemsSource = new List<string>();
         }
 
         public void OnDelete(object sender, EventArgs e)
         {
-            //DisplayAlert("Delete Context Action", "Removing this movie from the list.", "OK");
+            MenuItem mi = ((MenuItem)sender);
+            string item = mi.CommandParameter.ToString();
+
+            this.Movies.Remove(item);
+            moviesListView.ItemsSource = this.Movies;
+            //Movies.Remove(sender as string);
+            //moviesListView.ItemsSource = Movies;
+        }
+
+        private void moviesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem ==null)
+            {
+                return;
+            }
+
+            string item = e.SelectedItem.ToString();
+            ((ListView)sender).SelectedItem = null;
+            Navigation.PushAsync(new movieInfoPage(item));
             
-            Movies.Remove(sender as string);
-            moviesListView.ItemsSource = Movies;
         }
     }
 }
