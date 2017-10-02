@@ -52,6 +52,9 @@
             <Button x:name="ListViewButton" Text="Go to list"
                     Clicked="ListViewButtonClicked"/>
 
+            <Button x:Name="GridButton" Text="Go to grids"
+                    Clicked="GridButton_Clicked"/>
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

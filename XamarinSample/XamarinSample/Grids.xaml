@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinSample.Grids">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--<Label Text="Label1" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Label2" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Label3" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Label4" Grid.Row="1" Grid.Column="1"/>-->
+                <Image Source="http://i2.cdn.cnn.com/cnnnext/dam/assets/161201115958-68-year-in-pictures-2016-restricted-super-169.jpg"
+                       Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" WidthRequest="1000"/>
+                <Label Text="Label5" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Label6" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

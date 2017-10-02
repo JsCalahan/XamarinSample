@@ -23,5 +23,10 @@ namespace XamarinSample
         {
             Navigation.PushAsync(new ListViewPage());
         }
+
+        private void GridButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Grids());
+        }
     }
 }
